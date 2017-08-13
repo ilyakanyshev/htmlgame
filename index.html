@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crafty block</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			z-index: 0;
+		}
+		body{
+			background: #141745;
+		}
+		div.title {
+			font-size: 7em;
+			padding: 30px;
+			width: 100%;
+			position: absolute;
+			color: white;
+			text-align: center;
+		}
+		div#newGame, div#gameOver,canvas {
+			position: absolute;
+			height: 100%;
+			width: calc( 100% - 100px );
+		}
+		div.button{
+			width: 100%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			color: white;
+			font-size: 5em;
+			cursor: pointer;
+			text-align: center;
+			background: #363856;
+			border: 10px solid #363856;
+		}
+		div#highScore{
+			position: absolute;
+			left: 10px;
+			font-size: 1em;
+			color: white;
+			top: 10px;
+			padding: 10px;
+			border-bottom-right-radius: 10px;
+			width: 150px;
+			background: black;
+			z-index: 100;
+		}
+		div#score{
+			position: absolute;
+			right: 10px;
+			font-size: 1em;
+			color: white;
+			top: 10px;
+			border-bottom-left-radius: 10px;
+			padding: 10px;
+			width: 150px;
+			background: black;
+			z-index: 100;
+		}
+	</style>
+</head>
+<body>
+<div id="canv" style="display: none;">
+	<canvas id="canvas"></canvas>
+	<div id="highScore">High score: 0</div>
+	<div id="score">Score: 0</div>
+</div>
+<div id="gameOver" style="display: none;">
+	<div class="title">Crafty block</div>
+	<div id="gohs"></div>
+	<div class="button" onclick="game.start()" style="margin-top: 30%;">
+		Restart Game!
+	</div>
+</div>
+<div id="newGame" style="width: 100%;">
+	<div class="title">Crafty block</div>
+	<div class="button" onclick="game.start()" style="margin-top: 25%;">
+		Play
+	</div>
+	<div class="button" onclick="rules()" style="margin-top: 5px;">
+		Rules
+	</div>
+</div>
+<div style="display: none;">
+	<img id="" src="">
+</div>
+
+<script type="text/javascript" src="inputs.js">
+</script>
+</body>
+</html>
